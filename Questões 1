@@ -1,0 +1,38 @@
+package primeiro_projeto;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Notas {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double nota1, nota2, nota3, nota4, notafinal; 
+		System.out.print("Digite a primeira nota: ");
+		nota1 = sc.nextDouble();
+		System.out.print("Digite a segunda nota: ");
+		nota2 = sc.nextDouble();
+		        System.out.print("Digite a terceira nota: ");
+		        nota3 = sc.nextDouble();
+		        System.out.print("Digite a quarta nota: ");
+		        nota4 = sc.nextDouble();
+		 notafinal = (nota1 + nota2 + nota3 + nota4) / 4;
+		 
+		 if(notafinal < 3.0 && notafinal >= 0.0){
+			 System.out.println("NOTA FINAL = " +String.format("%.1f", notafinal)); 
+			 System.out.println("REPROVADO");
+		
+		 }else if (notafinal >= 3.0 && notafinal < 7.0){
+			 System.out.println("NOTA FINAL = " +String.format("%.1f", notafinal)); 
+			 System.out.println("EXAME");
+	
+		 }else if (notafinal >= 7.0 && notafinal <= 10.0){
+			 System.out.println("NOTA FINAL = " +String.format("%.1f", notafinal)); 
+			 System.out.println("APROVADO");
+			 }
+		 sc.close();
+	}
+
+}
