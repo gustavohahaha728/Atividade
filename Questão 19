@@ -1,0 +1,29 @@
+package questaoes;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Questaoes {
+
+    public static void main(String[] args) {
+         Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+                
+                double altura, homem, mulher; 
+                String sexo;
+                
+		System.out.print("Digite o seu sexo: ");
+		sexo = sc.nextLine();
+		 System.out.print("Digite a sua altura: ");
+		altura = sc.nextDouble();
+                
+		if (sexo.equals("M")){
+                homem = (72.7*altura)-58;
+                System.out.println("Seu peso idel é: "+homem);
+                
+                }else {
+                mulher = (62.1*altura)-44.7;
+                System.out.println("Seu peso idel é: "+mulher);
+		 }
+	    sc.close();
+	}
+}
